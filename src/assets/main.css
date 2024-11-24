@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Josefin+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Karla:ital,wght@0,400;0,700;1,400;1,700&family=Poppins:ital,wght@0,400;0,700;1,400;1,700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-size: 18px;
+  line-height: 1.6;
+  font-weight: normal;
+  font-family: var(--font-body);
+  overflow-wrap: break-word;
+  word-break: break-word;
+  background-color: var(--bg-color);
+  height: 100%;
+  margin: 0 auto;
+
+  line-height: 1;
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+}
+
+img,
+svg {
+  display: block;
+  max-inline-size: 100%;
+}
+
+button {
+  font: inherit;
+  letter-spacing: inherit;
+  word-spacing: inherit;
+  color: currentColor;
+}
+
+ul,
+a {
+  list-style: none;
+  text-decoration: none;
+  color: inherit;
+}
