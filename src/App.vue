@@ -1,7 +1,9 @@
 <template>
   <div class="background-img" :style="{ backgroundImage: `url('${bgImage}')` }">
-    <HeaderSection :is-dark-mode="isDarkMode" @toggle-dark-mode="toggleDarkMode" />
-    <TodoSection />
+    <div class="content-container">
+      <HeaderSection :is-dark-mode="isDarkMode" @toggle-dark-mode="toggleDarkMode" />
+      <TodoSection />
+    </div>
   </div>
 </template>
 
@@ -9,7 +11,6 @@
 import { ref, watch, computed, onMounted } from 'vue'
 import HeaderSection from './components/HeaderSection.vue'
 import TodoSection from './components/TodoSection.vue'
-
 import BgDark from './assets/images/bg-desktop-dark.jpg'
 import BgLight from './assets/images/bg-desktop-light.jpg'
 import BgMobileDark from './assets/images/bg-mobile-dark.jpg'
@@ -25,7 +26,7 @@ onMounted(() => {
 })
 
 const bgImage = computed(() => {
-  if (windowWidth.value < 600) {
+  if (windowWidth.value < 592) {
     return isDarkMode.value ? BgMobileDark : BgMobileLight
   }
   return isDarkMode.value ? BgDark : BgLight
@@ -55,5 +56,21 @@ watch(isDarkMode, (newValue) => {
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
+}
+
+.content-container {
+  width: 37rem;
+  margin: auto;
+  padding: 4.5rem 24px 3rem 24px;
+}
+
+@media (max-width: 592px) {
+  .content-container {
+    width: auto;
+    padding: 3rem 24px 2rem 24px;
+  }
+  .background-img {
+    background-size: contain;
+  }
 }
 </style>

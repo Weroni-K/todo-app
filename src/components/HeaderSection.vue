@@ -31,8 +31,7 @@ const toggleDarkMode = () => {
 <style scoped>
 .navbar {
   padding: 0;
-  margin: auto;
-  margin-bottom: 3rem;
+  margin: auto auto 3rem;
   width: 100%;
   display: flex;
   flex-direction: row;
@@ -58,5 +57,14 @@ const toggleDarkMode = () => {
 .theme-icon:hover {
   transform: scale(1.1);
   opacity: 0.8;
+}
+
+@media (max-width: 592px) {
+  .navbar {
+    margin-bottom: 2.5rem;
+  }
+  .theme-icon {
+    height: 22px;
+  }
 }
 </style>
