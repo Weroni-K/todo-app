@@ -53,24 +53,22 @@ watch(isDarkMode, (newValue) => {
   max-width: 1440px;
   height: 300px;
   margin: auto;
-  background-repeat: no-repeat;
-  background-position: center top;
-  background-size: cover;
+  background: center top / cover no-repeat;
 }
 
 .content-container {
-  width: 37rem;
+  width: 36rem;
   margin: auto;
-  padding: 4.5rem 24px 3rem 24px;
+  padding: 4.5rem 0 3rem;
 }
 
 @media (max-width: 592px) {
+  .background-img {
+    height: 200px;
+  }
   .content-container {
     width: auto;
-    padding: 3rem 24px 2rem 24px;
-  }
-  .background-img {
-    background-size: contain;
+    padding: 3rem 24px 2rem;
   }
 }
 </style>

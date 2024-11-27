@@ -39,6 +39,15 @@ const toggleDarkMode = () => {
   align-items: center;
 }
 
+h1 {
+  font-size: 42px;
+  color: var(--color-header);
+  font-family: var(--font-body);
+  font-weight: var(--font-weight-700);
+  text-transform: uppercase;
+  letter-spacing: 1rem;
+}
+
 .toggle-theme {
   display: flex;
   justify-content: flex-end;
@@ -62,6 +71,9 @@ const toggleDarkMode = () => {
 @media (max-width: 592px) {
   .navbar {
     margin-bottom: 2.5rem;
+  }
+  h1 {
+    font-size: 24px;
   }
   .theme-icon {
     height: 22px;

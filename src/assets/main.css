@@ -12,38 +12,49 @@
 }
 
 body {
+  height: 100%;
+  margin: 0 auto;
   font-size: 18px;
-  line-height: 1.6;
+  line-height: 1;
   font-weight: normal;
   font-family: var(--font-body);
   overflow-wrap: break-word;
   word-break: break-word;
-  background-color: var(--bg-color);
-  height: 100%;
-  margin: 0 auto;
-
-  line-height: 1;
+  background-color: var(--color-bg-primary);
   transition:
     color 0.5s,
     background-color 0.5s;
-}
-
-img,
-svg {
-  display: block;
-  max-inline-size: 100%;
 }
 
 button {
   font: inherit;
   letter-spacing: inherit;
   word-spacing: inherit;
-  color: currentColor;
 }
 
-ul,
-a {
-  list-style: none;
-  text-decoration: none;
-  color: inherit;
+:root {
+  --color-light-neutral-light-grey-blue: hsl(233, 11%, 84%); /* unused */
+  --font-body: 'Josefin Sans', serif;
+  --font-weight-400: 400;
+  --font-weight-700: 700;
+  --color-header: hsl(0, 0%, 98%);
+  --color-gradient-bg: hsl(192, 100%, 67%) to hsl(280, 87%, 65%);
+  --color-text-active: hsl(220, 98%, 61%);
+  --color-bg-primary: hsl(236, 33%, 92%);
+  --color-bg-secondary: hsl(0, 0%, 98%);
+  --color-text-primary: hsl(235, 19%, 35%);
+  --color-text-secondary: hsl(236, 9%, 61%);
+  --color-text-secondary-hsla: hsla(236, 9%, 61%, 0.3);
+  --color-text-hover: hsl(235, 19%, 35%);
+}
+
+.dark-theme {
+  --color-dark-neutral-very-dark-grey-blue: hsl(233, 14%, 35%); /* unused */
+  --color-dark-neutral-very-dark-grey-blue2: hsl(237, 14%, 26%); /* unused */
+  --color-bg-primary: hsl(235, 21%, 11%);
+  --color-bg-secondary: hsl(235, 24%, 19%);
+  --color-text-primary: hsl(234, 39%, 85%);
+  --color-text-secondary: hsl(234, 11%, 52%);
+  --color-text-secondary-hsla: hsla(234, 11%, 52%, 0.3);
+  --color-text-hover: hsl(236, 33%, 92%);
 }
